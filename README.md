@@ -25,4 +25,4 @@
 - تحياتي : KasperTP 👾 •
 - تابع اخر تحديث للسورس 📊 •
 
-https://telegram.me/kasper_dev
+https://telegram.me/dev_kasper
