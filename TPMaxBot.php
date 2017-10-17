@@ -220,9 +220,6 @@ KasperTP('editmessagetext',[
 (تعطيل الترحيب)
 تـ؏ـطـيـل الـتـرحـيـب فـي الـםـجـםـو؏ـة 🎩
 |---------------------------------------------------------|
-(مسح) + عدد / مطور فقط
-مـسـح الرسـائـل بـ؏ـدد 🗑
-|---------------------------------------------------------|
 (ضع اسم) + نص
 تـغـيـر اسـم الـمـجـمـو؏ـة 🔁
 |---------------------------------------------------------|
@@ -1058,7 +1055,7 @@ message($message->reply_to_message->forward_from->id, $text);
 message($chat_id, "☑️ تـم ارسـال رسـالـتـك ✔️", $message_id);}
 //اوامر الماركداون
 if(preg_match('/^(ماركداون) (.*)/', $text, $markdown)){
-message($chat_id, $markdown[2], $message_id);}
+message($chat_id, "$markdown[2]", $message_id);}
 //تغير اسم المجموعة
 $setname = str_replace("ضع اسم", "$setname", $text);
 if($text == "ضع اسم $setname"){
@@ -1137,7 +1134,7 @@ KasperTP('editmessagetext',[
 if($text and !$data and file_get_contents("data/unll.json") == "bc" and $from_id == $sudo){
 for($h=0;$h<count($add_);$h++){
 file_put_contents("data/unll.json", " ");
-message($chat_id, $text, $message_id);}}
+message($chat_id[$h], $text, $message_id);}}
 if($text and !$data and file_get_contents("data/unll.json") == "bc" and $from_id == $sudo){
 $user = count($add_);
 message($chat_id, "_Broadcasted on everyone_\n\n`groups` *$user*", $message_id);}
